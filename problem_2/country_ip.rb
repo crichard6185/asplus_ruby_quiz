@@ -15,9 +15,7 @@ class CountryIp
       from_ip = row[0].to_i
       to_ip = row[1].to_i
 
-      if ip_int >= from_ip && ip_int <= to_ip
-        return row[6]
-      end
+      return row[6] if ip_int >= from_ip && ip_int <= to_ip
     end
   end
 
